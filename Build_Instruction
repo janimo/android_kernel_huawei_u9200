@@ -1,0 +1,12 @@
+Please follow http://omapedia.org/wiki/L27.IS.2.P2_OMAP4_Icecream_Sandwich_Release_Notes to compile the kernel source code
+
+This open source kernel is based on TAG(app_hw_platform_ics_ics_Beta_generic_product_global_B226_0927) for U9200-1 V100R001C00B226 of U9200
+
+Quick Guide
+
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+export PATH=$PATH:<toolchain_parent_dir>/arm-2010q1/bin
+make ARCH=arm distclean
+make ARCH=arm blaze_defconfig
+make ARCH=arm uImage -j64 2>&1 |tee $LOGPATH/kernel_make.out
+
