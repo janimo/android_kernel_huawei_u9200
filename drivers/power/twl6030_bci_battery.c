@@ -2267,7 +2267,7 @@ static int __devinit twl6030_bci_battery_probe(struct platform_device *pdev)
 
 	di->dev = &pdev->dev;
 	//di->bat.name = "twl6030_battery";
-	di->bat.name = "Battery";
+	di->bat.name = "battery";
 	di->bat.supplied_to = twl6030_bci_supplied_to;
 	di->bat.num_supplicants = ARRAY_SIZE(twl6030_bci_supplied_to);
 	di->bat.type = POWER_SUPPLY_TYPE_BATTERY;
@@ -2280,13 +2280,13 @@ static int __devinit twl6030_bci_battery_probe(struct platform_device *pdev)
 
 	di->usb.name = "twl6030_usb";
 #endif	
-	di->usb.name = "USB";
+	di->usb.name = "usb";
 	di->usb.type = POWER_SUPPLY_TYPE_USB;
 	di->usb.properties = twl6030_usb_props;
 	di->usb.num_properties = ARRAY_SIZE(twl6030_usb_props);
 	di->usb.get_property = twl6030_usb_get_property;
 	//di->ac.name = "twl6030_ac";
-	di->ac.name = "Mains";
+	di->ac.name = "mains";
 	di->ac.type = POWER_SUPPLY_TYPE_MAINS;
 	di->ac.properties = twl6030_ac_props;
 	di->ac.num_properties = ARRAY_SIZE(twl6030_ac_props);
